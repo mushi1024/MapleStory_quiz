@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>MapleStory 掉落測驗</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 700px; margin: auto; }
+    .question { margin-bottom: 20px; }
+    .options label { display: block; margin: 5px 0; }
+    #submit { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>MapleStory 掉落測驗</h1>
+  <form id="quiz">
+    <div class="question" id="q1">
+      <p>1. 怪物 <strong>白狼人</strong> 會掉落哪一項物品？</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="A"> A. 雷之鏢</label>
+        <label><input type="radio" name="q1" value="B"> B. 日之鏢</label>
+        <label><input type="radio" name="q1" value="C"> C. 月飛鏢</label>
+        <label><input type="radio" name="q1" value="D"> D. 木飛鏢</label>
+      </div>
+    </div>
+    <!-- 可加入更多題目 -->
+    <button type="button" id="submit">提交</button>
+    <div id="result"></div>
+  </form>
+  <script>
+    const answers = { q1: 'B' };
+    document.getElementById('submit').onclick = () => {
+      let score = 0;
+      const q1 = document.forms['quiz']['q1'].value;
+      if (q1 === answers.q1) score++;
+      document.getElementById('result').innerText = `你得了 ${score} 分`;
+    };
+  </script>
+</body>
+</html>
