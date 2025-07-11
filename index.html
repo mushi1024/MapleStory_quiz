@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Artale 掉落測驗</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('quiz_image.jpg') no-repeat top center;
+      background-size: cover;
+    }
+    .container {
+      background-color: rgba(255,255,255,0.95);
+      max-width: 800px;
+      margin: 120px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #999;
+    }
+    h1 { text-align: center; }
+    .question { margin-bottom: 25px; }
+    .options label { display: block; margin: 5px 0; }
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 30px;
+      font-size: 18px;
+      border: none;
+      background-color: #0078d4;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Artale 掉落測驗（共 10 題）</h1>
+    <form id="quiz">
+
+      <div class="question" id="q1">
+        <p>1. 怪物 <strong>火焰龍</strong> 會掉落哪一樣物品？</p>
+        <div class="options">
+          <label><input type="radio" name="q1" value="A"> A. 火焰之心</label>
+          <label><input type="radio" name="q1" value="B"> B. 火龍之牙</label>
+          <label><input type="radio" name="q1" value="C"> C. 熔岩結晶</label>
+          <label><input type="radio" name="q1" value="D"> D. 火龍皮</label>
+        </div>
+      </div>
+
+      <div class="question" id="q2">
+        <p>2. 要獲得 <strong>閃光羽毛</strong>，應該打哪個怪物？</p>
+        <div class="options">
+          <label><input type="radio" name="q2" value="A"> A. 天使魚</label>
+          <label><input type="radio" name="q2" value="B"> B. 銀翼鳥</label>
+          <label><input type="radio" name="q2" value="C"> C. 金羽鳥</label>
+          <label><input type="radio" name="q2" value="D"> D. 藍尾雀</label>
+        </div>
+      </div>
+
+      <div class="question" id="q3">
+        <p>3. 下列哪個怪物會掉落 <strong>強化之石</strong>？</p>
+        <div class="options">
+          <label><input type="radio" name="q3" value="A"> A. 大地魔像</label>
+          <label><input type="radio" name="q3" value="B"> B. 紅毒蛇</label>
+          <label><input type="radio" name="q3" value="C"> C. 碎石獸</label>
+          <label><input type="radio" name="q3" value="D"> D. 鋼鐵岩獸</label>
+        </div>
+      </div>
+
+      <div class="question" id="q4">
+        <p>4. <strong>銀狼</strong> 怪物出沒在哪張地圖？</p>
+        <div class="options">
+          <label><input type="radio" name="q4" value="A"> A. 冰雪荒原</label>
+          <label><input type="radio" name="q4" value="B"> B. 月影森林</label>
+          <label><input type="radio" name="q4" value="C"> C. 狼吼高地</label>
+          <label><input type="radio" name="q4" value="D"> D. 幽影山道</label>
+        </div>
+      </div>
+
+      <div class="question" id="q5">
+        <p>5. 要打哪隻怪才能掉 <strong>古代銅幣</strong>？</p>
+        <div class="options">
+          <label><input type="radio" name="q5" value="A"> A. 古代骷髏</label>
+          <label><input type="radio" name="q5" value="B"> B. 銹蝕守衛</label>
+          <label><input type="radio" name="q5" value="C"> C. 金幣蟲</label>
+          <label><input type="radio" name="q5" value="D"> D. 財寶箱靈</label>
+        </div>
+      </div>
+
+      <div class="question" id="q6">
+        <p>6. 哪個怪會掉落 <strong>魔法晶核</strong>？</p>
+        <div class="options">
+          <label><input type="radio" name="q6" value="A"> A. 魔石像</label>
+          <label><input type="radio" name="q6" value="B"> B. 魔導師影子</label>
+          <label><input type="radio" name="q6" value="C"> C. 幽靈眼</label>
+          <label><input type="radio" name="q6" value="D"> D. 魔晶獸</label>
+        </div>
+      </div>
+
+      <div class="question" id="q7">
+        <p>7. 下列哪一項不是 <strong>九尾妖狐</strong> 的掉落物？</p>
+        <div class="options">
+          <label><input type="radio" name="q7" value="A"> A. 妖狐皮</label>
+          <label><input type="radio" name="q7" value="B"> B. 雷之鏢</label>
+          <label><input type="radio" name="q7" value="C"> C. 九尾符咒</label>
+          <label><input type="radio" name="q7" value="D"> D. 火之卷軸</label>
+        </div>
+      </div>
+
+      <div class="question" id="q8">
+        <p>8. <strong>殭屍蘑菇王</strong> 掉落下列哪個道具？</p>
+        <div class="options">
+          <label><input type="radio" name="q8" value="A"> A. 木飛鏢</label>
+          <label><input type="radio" name="q8" value="B"> B. 冰柱</label>
+          <label><input type="radio" name="q8" value="C"> C. 日之鏢</label>
+          <label><input type="radio" name="q8" value="D"> D. 雪人帽</label>
+        </div>
+      </div>
+
+      <div class="question" id="q9">
+        <p>9. <strong>巨石像</strong> 常出現在哪裡？</p>
+        <div class="options">
+          <label><input type="radio" name="q9" value="A"> A. 石壁古道</label>
+          <label><input type="radio" name="q9" value="B"> B. 山腰迷宮</label>
+          <label><input type="radio" name="q9" value="C"> C. 地下神殿</label>
+          <label><input type="radio" name="q9" value="D"> D. 天空塔</label>
+        </div>
+      </div>
+
+      <div class="question" id="q10">
+        <p>10. 下列哪個物品不是透過打怪取得？</p>
+        <div class="options">
+          <label><input type="radio" name="q10" value="A"> A. 製作圖紙</label>
+          <label><input type="radio" name="q10" value="B"> B. 魔法原石</label>
+          <label><input type="radio" name="q10" value="C"> C. 日之鏢</label>
+          <label><input type="radio" name="q10" value="D"> D. 雷之鏢</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">提交</button>
+    </form>
+  </div>
+
+  <script>
+    const answers = {
+      q1: 'B', q2: 'C', q3: 'A', q4: 'C', q5: 'A',
+      q6: 'D', q7: 'D', q8: 'C', q9: 'A', q10: 'A'
+    };
+
+    function checkAnswers() {
+      let score = 0;
+      for (let i = 1; i <= 10; i++) {
+        const q = document.forms['quiz']['q' + i].value;
+        if (q === answers['q' + i]) score++;
+      }
+      alert(`你得了 ${score} 分！（共 10 題）`);
+    }
+  </script>
+</body>
+</html>
